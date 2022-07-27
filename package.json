@@ -1,0 +1,19 @@
+{
+  "name": "we-laundry-desc",
+  "version": "1.0.0",
+  "description": "description website of welaundry",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "parcel index.html",
+    "build": "parcel build index.html",
+    "sass": "node-sass -wr --source-map true ./src/style/main.scss ./style.css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^7.3.0",
+    "parcel-bundler": "^1.12.5"
+  }
+}
