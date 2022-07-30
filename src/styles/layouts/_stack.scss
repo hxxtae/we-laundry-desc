@@ -1,0 +1,27 @@
+.stack {
+
+  h3 {
+    color: $text;
+    font-weight: 600;
+
+    &:after {
+      content: '_link';
+      position: relative;
+      right: -5px;
+      font-size: 12px;
+    }
+  }
+
+  &-contents {
+    .stack-name {
+      color: $text;
+      border-color: $primary-blue;
+
+      &:hover,
+      &:active {
+        color: $light;
+        background-color: $primary-blue;
+      }
+    }
+  }
+}

@@ -1,0 +1,18 @@
+.description {
+  h3 {
+    font-weight: 600;
+    color: $text;
+  }
+
+  &-contents {
+    h4 {
+      
+      color: $text;
+    }
+    
+    p {
+      font-size: 14px;
+      color: $text;
+    }
+  }
+}
