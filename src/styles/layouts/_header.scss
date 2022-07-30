@@ -1,0 +1,16 @@
+.header {
+  padding-top: 70px;
+
+  &-box {
+
+    h2 {
+      font-weight: 600;
+      color: $text;
+    }
+
+    p {
+      color: $text;
+    }
+  }
+}
+
