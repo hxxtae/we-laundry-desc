@@ -1,10 +1,35 @@
 .pages {
+  //position: relative;
+  //overscroll-behavior: contain;
+
   h3 {
     color: $text;
     font-weight: 600;
   }
 
-  &-contents {
-
+  #pages-list {
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+    max-height: 100vh;
   }
+
+  &-scrollspy {
+    overflow-x: hidden;
+    overflow-y: scroll;
+    height: 88vh;
+
+    &::-webkit-scrollbar {
+      width: 10px;
+    }
+    &::-webkit-scrollbar-track {
+      background-color: $light;
+      border-radius: 5px;
+    }
+    &::-webkit-scrollbar-thumb {
+      background-color: $text;
+      border-radius: 5px;
+    }
+  }
+  
 }
