@@ -83,7 +83,7 @@
           <h3 class="description-title pb-2">Description</h3>
           <div class="border-bottom mb-3"></div>
           <div class="description-contents">
-            <ul class="d-flex flex-column mb-0">
+            <ul class="d-flex flex-column mb-0 pe-4">
               <li class="">
                 <h4>What?</h4>
                 <p>대중적인 포스 시스템은 일반 음식점이나, 카페, 의류매장에서 많이 사용하지만, 세탁소 업종에서는
@@ -178,7 +178,7 @@
               Login/Signup
             </a>
             <a class="list-group-item list-group-item-action" href="#list-item-2">
-              Start/End
+              Main
             </a>
             <a class="list-group-item list-group-item-action" href="#list-item-3">
               Address
@@ -203,22 +203,56 @@
         <div class="col-lg-9">
           <div class="pages-scrollspy" data-bs-spy="scroll" data-bs-target="pages-list" data-bs-smooth-scroll="true" tabindex="0">
             <h4 id="list-item-1" class="p-2 p-lg-3 mb-0">Login/Signup
-              <span>(로그인/회원가입)</span>
+              <span>(로그인/회원가입)</span>              
             </h4>
             <div class="pages-contents p-2 p-lg-3 mb-4">
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore hic error non asperiores voluptas accusantium voluptatum assumenda ipsum, eius, quod deserunt earum, saepe consectetur fugit tempore minus provident! Similique, maxime.</p>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore hic error non asperiores voluptas accusantium voluptatum assumenda ipsum, eius, quod deserunt earum, saepe consectetur fugit tempore minus provident! Similique, maxime.</p>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore hic error non asperiores voluptas accusantium voluptatum assumenda ipsum, eius, quod deserunt earum, saepe consectetur fugit tempore minus provident! Similique, maxime.</p>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore hic error non asperiores voluptas accusantium voluptatum assumenda ipsum, eius, quod deserunt earum, saepe consectetur fugit tempore minus provident! Similique, maxime.</p>
+              <div class="pages-wrapper d-flex flex-column flex-lg-row">
+                <div class="pages-image w-100 me-3 text-center">
+                  <img src="./src/assets/img/mw_address.PNG" alt="before-login-image">
+                </div>
+                <div class="pages-image w-100 text-center">
+                  <img src="./src/assets/img/we_login.PNG" alt="after-login-image">
+                </div>
+              </div>
+              <div class="mt-5">
+                <hr/>
+                <h5>Before</h5>
+                <p>&#11093; 회원가입 페이지 및 기능 미포함.</p>
+                <p>&#11093; 로그인 시 세션을 통한 사용자 접속 유지 및 식별.</p>
+                <hr/>
+                <h5>After</h5>
+                <p>&#10004; 회원가입 페이지 및 기능 포함.
+                  <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#signup-image">보기</button>
+                </p>
+                <p>&#10004; 회원가입 시 기존 사용자 중복확인 및 메세지 출력.</p>
+                <p>&#10004; 로그인 시 토큰(브라우저 쿠키) 생성을 통한 사용자 접속 유지 및 식별.</p>
+              </div>
             </div>
-            <h4 id="list-item-2" class="p-2 p-lg-3 mb-0">Start/End
-              <span>(영업시작/종료)</span>
+            <h4 id="list-item-2" class="p-2 p-lg-3 mb-0">Main
+              <span>(메인화면)</span>
             </h4>
             <div class="pages-contents p-2 p-lg-3 mb-4">
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore hic error non asperiores voluptas accusantium voluptatum assumenda ipsum, eius, quod deserunt earum, saepe consectetur fugit tempore minus provident! Similique, maxime.</p>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore hic error non asperiores voluptas accusantium voluptatum assumenda ipsum, eius, quod deserunt earum, saepe consectetur fugit tempore minus provident! Similique, maxime.</p>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore hic error non asperiores voluptas accusantium voluptatum assumenda ipsum, eius, quod deserunt earum, saepe consectetur fugit tempore minus provident! Similique, maxime.</p>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore hic error non asperiores voluptas accusantium voluptatum assumenda ipsum, eius, quod deserunt earum, saepe consectetur fugit tempore minus provident! Similique, maxime.</p>
+              <div class="pages-wrapper d-flex flex-row">
+                <div class="pages-image w-100 me-3 text-center">
+                  <img src="./src/assets/img/mw_main.PNG" alt="before-main-image">
+                </div>
+                <div class="pages-image w-100 text-center">
+                  <img src="./src/assets/img/we_main.PNG" alt="after-main-image">
+                </div>
+              </div>
+              <div class="mt-5">
+                <hr/>
+                <h5>Before</h5>
+                <p>&#11093; 최초 로그인 접속 시 에만 출력되는 페이지.</p>
+                <p>&#11093; 동적 SVG 베너 이외 다른 기능은 존재하지 않음.</p>
+                <hr/>
+                <h5>After</h5>
+                <p>&#10004; 최초 로그인 및 토큰(브라우저 쿠키) 존재 시 최초 접속 후 출력되는 페이지.</p>
+                <p>&#10004; "포스 프로그램" 운영(영업) 시작 및 종료 기능 추가.</p>
+                <p>&#10004; 영업 시작 시 시간 기록 및 
+                  <a href="#list-item-6">Order(주문접수)</a> 
+                  페이지 활성화.</p>
+              </div>
             </div>
             <h4 id="list-item-3" class="p-2 p-lg-3 mb-0">Address
               <span>(주소관리)</span>
@@ -279,6 +313,21 @@
       </div>
     </div>
   </section>
+
+  <!-- popup -->
+  <div class="modal fade" id="signup-image" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Signup (회원가입)</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <img src="./src/assets/img/we_signup.PNG" alt="signup-image" class="w-100"">
+        </div>
+      </div>
+    </div>
+  </div>
   
   <!-- vanta.js -->
   <script defer src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
