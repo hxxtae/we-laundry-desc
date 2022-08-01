@@ -1,6 +1,4 @@
 .pages {
-  //position: relative;
-  //overscroll-behavior: contain;
 
   h3 {
     color: $text;
@@ -17,6 +15,7 @@
   &-scrollspy {
     overflow-x: hidden;
     overflow-y: scroll;
+    overscroll-behavior: contain;
     height: 88vh;
 
     &::-webkit-scrollbar {
