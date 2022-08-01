@@ -29,6 +29,25 @@
       background-color: $text;
       border-radius: 5px;
     }
+
+    h4 {
+      color: $primary-blue;
+      background-color: #fff;
+      border: 1px solid $light-gray;
+      border-radius: 3px;
+      font-size: 20px;
+
+      span {
+        font-size: 16px;
+      }
+    }
+  }
+
+  &-contents {
+    background-color: $light-blue;
+    border: 1px solid $light-blue-border;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
   }
   
 }
