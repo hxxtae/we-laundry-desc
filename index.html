@@ -13,6 +13,7 @@
   <title>Welaundry</title>
 </head>
 <body>
+  <!-- Banner -->
   <section class="banner">
     <div class="container ">
       <div class="row">
@@ -40,6 +41,7 @@
     </div>
   </section>
 
+  <!-- Header -->
   <section class="header mb-2">
     <div class="container">
       <div class="row">
@@ -76,6 +78,7 @@
     </div>
   </section>
 
+  <!-- Description -->
   <section class="description mb-2">
     <div class="container">
       <div class="row">
@@ -106,6 +109,7 @@
     </div>
   </section>
 
+  <!-- Stack -->
   <section class="stack mb-2">
     <div class="container">
       <div class="row">
@@ -163,6 +167,7 @@
     </div>
   </section>
 
+  <!-- Pages -->
   <section class="pages mt-md-5 mb-2 pt-5">
     <div class="container">
       <div class="row">
@@ -207,10 +212,10 @@
             </h4>
             <div class="pages-contents p-2 p-lg-3 mb-4">
               <div class="pages-wrapper d-flex flex-column flex-lg-row">
-                <div class="pages-image w-100 me-3 text-center">
+                <div class="pages-image before-login-image w-100 me-3 text-center" data-bs-toggle="modal" data-bs-target="#detail-image">
                   <img src="./src/assets/img/mw_address.PNG" alt="before-login-image">
                 </div>
-                <div class="pages-image w-100 text-center">
+                <div class="pages-image after-login-image w-100 text-center" data-bs-toggle="modal" data-bs-target="#detail-image">
                   <img src="./src/assets/img/we_login.PNG" alt="after-login-image">
                 </div>
               </div>
@@ -218,14 +223,14 @@
                 <hr/>
                 <h5>Before</h5>
                 <p>&#11093; 회원가입 페이지 및 기능 미포함.</p>
-                <p>&#11093; 로그인 시 세션을 통한 사용자 접속 유지 및 식별.</p>
+                <p>&#11093; 로그인 시 서버 인증 방식(세션 & 쿠키)을 통한 사용자 접속 식별 및 유지.</p>
                 <hr/>
                 <h5>After</h5>
                 <p>&#10004; 회원가입 페이지 및 기능 포함.
                   <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#signup-image">보기</button>
                 </p>
                 <p>&#10004; 회원가입 시 기존 사용자 중복확인 및 메세지 출력.</p>
-                <p>&#10004; 로그인 시 토큰(브라우저 쿠키) 생성을 통한 사용자 접속 유지 및 식별.</p>
+                <p>&#10004; 로그인 시 토큰(JWT) 생성을 통한 사용자 접속 식별 및 유지.</p>
               </div>
             </div>
             <h4 id="list-item-2" class="p-2 p-lg-3 mb-0">Main
@@ -233,10 +238,10 @@
             </h4>
             <div class="pages-contents p-2 p-lg-3 mb-4">
               <div class="pages-wrapper d-flex flex-row">
-                <div class="pages-image w-100 me-3 text-center">
+                <div class="pages-image w-100 me-3 text-center" data-bs-toggle="modal" data-bs-target="#detail-image">
                   <img src="./src/assets/img/mw_main.PNG" alt="before-main-image">
                 </div>
-                <div class="pages-image w-100 text-center">
+                <div class="pages-image w-100 text-center" data-bs-toggle="modal" data-bs-target="#detail-image">
                   <img src="./src/assets/img/we_main.PNG" alt="after-main-image">
                 </div>
               </div>
@@ -258,10 +263,25 @@
               <span>(주소관리)</span>
             </h4>
             <div class="pages-contents p-2 p-lg-3 mb-4">
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore hic error non asperiores voluptas accusantium voluptatum assumenda ipsum, eius, quod deserunt earum, saepe consectetur fugit tempore minus provident! Similique, maxime.</p>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore hic error non asperiores voluptas accusantium voluptatum assumenda ipsum, eius, quod deserunt earum, saepe consectetur fugit tempore minus provident! Similique, maxime.</p>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore hic error non asperiores voluptas accusantium voluptatum assumenda ipsum, eius, quod deserunt earum, saepe consectetur fugit tempore minus provident! Similique, maxime.</p>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore hic error non asperiores voluptas accusantium voluptatum assumenda ipsum, eius, quod deserunt earum, saepe consectetur fugit tempore minus provident! Similique, maxime.</p>
+              <div class="pages-wrapper d-flex flex-row">
+                <div class="pages-image w-100 me-3 text-center">
+                  <img src="./src/assets/img/mw_address.PNG" alt="before-address-image">
+                </div>
+                <div class="pages-image w-100 text-center">
+                  <img src="./src/assets/img/we_address.PNG" alt="after-address-image">
+                </div>
+              </div>
+              <div class="mt-5">
+                <hr/>
+                <h5>Before</h5>
+                <p>&#11093; 정확한 우편번호를 찾을 수 있는 검색 기능이 없다.</p>
+                <p>&#11093; 주소ID는 고유번호를 오름차순으로 생성하여 부여하는 방식으로 관리됨. (Oracle의 Sequence 사용)</p>
+                <hr/>
+                <h5>After</h5>
+                <p>&#10004; 정확한 우편번호를 찾을 수 있는 <a href="https://postcode.map.daum.net/guide" target="_blank">우편번호 오픈소스</a> 를 사용.</p>
+                <p>&#10004; 주소ID는 중복이 없는 고유번호를 생성하는 방식으로 변경. (MongoDB의 ObjectId 사용)</p>
+                <p>&#10004; 많은 주소 데이터 관리를 위해 페이징 처리 됨.</p>
+              </div>
             </div>
             <h4 id="list-item-4" class="p-2 p-lg-3 mb-0">Customer
               <span>(고객관리)</span>
@@ -314,7 +334,7 @@
     </div>
   </section>
 
-  <!-- popup -->
+  <!-- Image Popup -->
   <div class="modal fade" id="signup-image" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
@@ -328,12 +348,29 @@
       </div>
     </div>
   </div>
+
+  <div class="modal fade" id="detail-image" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" style="max-width: 800px">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body show-detail">
+          <img src="" alt="detail-image" class="w-100"">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- popup.js -->
+  <script src="./src/js/popup.js"></script>
   
   <!-- vanta.js -->
   <script defer src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
   <script defer src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.waves.min.js"></script>
   <script defer src="./src/js/vantaOptions.js"></script>
   
+  <!-- bootstrap.js -->
   <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
   <script defer src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
   <script defer src="./src/js/bootstrapJs.js"></script>
