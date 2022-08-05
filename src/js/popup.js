@@ -12,6 +12,10 @@ const MW_IMG_MAIN = "mw_main.0d904070.PNG";
 const WE_IMG_MAIN = "we_main.560d9340.PNG";
 const MW_IMG_ADDRESS = "mw_address.PNG";
 const WE_IMG_ADDRESS = "we_address.PNG";
+const MW_IMG_CUSTOMER = "mw_customer.PNG";
+const WE_IMG_CUSTOMER = "we_customer.PNG";
+const MW_IMG_HISTORY = "mw_history.PNG";
+const WE_IMG_HISTORY = "we_history.PNG";
 
 // build
 const MW_IMG_LOGIN_BUILD =  "mw_address.131beb94.PNG";
@@ -20,6 +24,10 @@ const MW_IMG_MAIN_BUILD = "mw_main.aedf805e.PNG";
 const WE_IMG_MAIN_BUILD = "we_main.e8f08d9d.PNG";
 const MW_IMG_ADDRESS_BUILD = "mw_address.131beb94.PNG";
 const WE_IMG_ADDRESS_BUILD = "we_address.eca32eb5.PNG";
+const MW_IMG_CUSTOMER_BUILD = "mw_customer.PNG";
+const WE_IMG_CUSTOMER_BUILD = "we_customer.PNG";
+const MW_IMG_HISTORY_BUILD = "mw_history.PNG";
+const WE_IMG_HISTORY_BUILD = "we_history.PNG";
 
 const pages = document.querySelector('.pages-scrollspy');
 const popup = document.querySelector(".show-detail");
@@ -38,7 +46,6 @@ pages.addEventListener('click', (e) => {
   } else if (altStr === AFTER_LOGIN) {
     const srcStr = configImgStr('after', state, 'login');
     popupImg.setAttribute('src', srcStr);
-    console.log(result);
   } else if (altStr === BEFORE_MAIN) {
     const srcStr = configImgStr('before', state, 'main');
     popupImg.setAttribute('src', srcStr);
