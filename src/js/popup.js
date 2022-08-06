@@ -4,18 +4,34 @@ const BEFORE_MAIN = "before-main-image";
 const AFTER_MAIN = "after-main-image";
 const BEFORE_ADDRESS = "before-address-image";
 const AFTER_ADDRESS = "after-address-image";
+const BEFORE_CUSTOMER = "before-customer-image";
+const AFTER_CUSTOMER = "after-customer-image";
+const BEFORE_PRODUCTS = "before-products-image";
+const AFTER_PRODUCTS = "after-products-image";
+const BEFORE_ORDER = "before-order-image";
+const AFTER_ORDER = "after-order-image";
+const BEFORE_HISTORY = "before-history-image";
+const AFTER_HISTORY = "after-history-image";
+const BEFORE_SALE = "before-sale-image";
+const AFTER_SALE = "after-sale-image";
 
 // dev
 const MW_IMG_LOGIN =  "mw_address.76d49ea8.PNG";
 const WE_IMG_LOGIN = "we_login.55d31020.PNG";
 const MW_IMG_MAIN = "mw_main.0d904070.PNG";
 const WE_IMG_MAIN = "we_main.560d9340.PNG";
-const MW_IMG_ADDRESS = "mw_address.PNG";
-const WE_IMG_ADDRESS = "we_address.PNG";
-const MW_IMG_CUSTOMER = "mw_customer.PNG";
-const WE_IMG_CUSTOMER = "we_customer.PNG";
-const MW_IMG_HISTORY = "mw_history.PNG";
-const WE_IMG_HISTORY = "we_history.PNG";
+const MW_IMG_ADDRESS = "mw_address.76d49ea8.PNG";
+const WE_IMG_ADDRESS = "we_address.a1b07bd7.PNG";
+const MW_IMG_CUSTOMER = "mw_customer.b0089598.PNG";
+const WE_IMG_CUSTOMER = "we_customer.975c1046.PNG";
+const MW_IMG_PRODUCTS = "mw_products.d6edd1f2.PNG";
+const WE_IMG_PRODUCTS = "we_products.674e7d83.PNG";
+const MW_IMG_ORDER = "mw_order.e9be7c4b.PNG";
+const WE_IMG_ORDER = "we_record.61d3181c.PNG";
+const MW_IMG_HISTORY = "mw_history.04caf80e.PNG";
+const WE_IMG_HISTORY = "we_history.966db0ae.PNG";
+const MW_IMG_SALE = "mw_sales.fe4712aa.PNG";
+const WE_IMG_SALE = "we_sale.PNG";
 
 // build
 const MW_IMG_LOGIN_BUILD =  "mw_address.131beb94.PNG";
@@ -38,28 +54,59 @@ pages.addEventListener('click', (e) => {
   const popupImg = popup.children[0];
   const target = e.target;
   const altStr = target.getAttribute('alt');
+  const attrStr = 'src';
   const state = 'dev';
 
   if (altStr === BEFORE_LOGIN) {
     const srcStr = configImgStr('before', state, 'login');
-    popupImg.setAttribute('src', srcStr);
+    popupImg.setAttribute(attrStr, srcStr);
   } else if (altStr === AFTER_LOGIN) {
     const srcStr = configImgStr('after', state, 'login');
-    popupImg.setAttribute('src', srcStr);
+    popupImg.setAttribute(attrStr, srcStr);
   } else if (altStr === BEFORE_MAIN) {
     const srcStr = configImgStr('before', state, 'main');
-    popupImg.setAttribute('src', srcStr);
+    popupImg.setAttribute(attrStr, srcStr);
   } else if (altStr === AFTER_MAIN) {
     const srcStr = configImgStr('after', state, 'main');
-    popupImg.setAttribute('src', srcStr);
-  } else if(altStr === BEFORE_ADDRESS) {
+    popupImg.setAttribute(attrStr, srcStr);
+  } else if (altStr === BEFORE_ADDRESS) {
     const srcStr = configImgStr('before', state, 'address');
-    popupImg.setAttribute('src', srcStr);
-  } else if(altStr === AFTER_ADDRESS) {
+    popupImg.setAttribute(attrStr, srcStr);
+  } else if (altStr === AFTER_ADDRESS) {
     const srcStr = configImgStr('after', state, 'address');
-    popupImg.setAttribute('src', srcStr);
+    popupImg.setAttribute(attrStr, srcStr);
+  } else if (altStr === BEFORE_CUSTOMER) {
+    const srcStr = configImgStr('before', state, 'customer');
+    popupImg.setAttribute(attrStr, srcStr);
+  } else if (altStr === AFTER_CUSTOMER) {
+    const srcStr = configImgStr('after', state, 'customer');
+    popupImg.setAttribute(attrStr, srcStr);
+  } else if (altStr === BEFORE_PRODUCTS) {
+    const srcStr = configImgStr('before', state, 'products');
+    popupImg.setAttribute(attrStr, srcStr);
+  } else if (altStr === AFTER_PRODUCTS) {
+    const srcStr = configImgStr('after', state, 'products');
+    popupImg.setAttribute(attrStr, srcStr);
+  } else if (altStr === BEFORE_ORDER) {
+    const srcStr = configImgStr('before', state, 'order');
+    popupImg.setAttribute(attrStr, srcStr);
+  } else if (altStr === AFTER_ORDER) {
+    const srcStr = configImgStr('after', state, 'order');
+    popupImg.setAttribute(attrStr, srcStr);
+  } else if (altStr === BEFORE_HISTORY) {
+    const srcStr = configImgStr('before', state, 'history');
+    popupImg.setAttribute(attrStr, srcStr);
+  } else if (altStr === AFTER_HISTORY) {
+    const srcStr = configImgStr('after', state, 'history');
+    popupImg.setAttribute(attrStr, srcStr);
+  } else if (altStr === BEFORE_SALE) {
+    const srcStr = configImgStr('before', state, 'sale');
+    popupImg.setAttribute(attrStr, srcStr);
+  } else if (altStr === AFTER_SALE) {
+    const srcStr = configImgStr('after', state, 'sale');
+    popupImg.setAttribute(attrStr, srcStr);
   } else {
-    popupImg.setAttribute('src', '');
+    popupImg.setAttribute(attrStr, '');
   }
 });
 
@@ -83,18 +130,38 @@ function configImgStr(kind, state, name) {
     if(!kindChk) {
       return devChk ? MW_IMG_ADDRESS : MW_IMG_ADDRESS_BUILD;
     } else if(kindChk) {
-      return devChk ? MW_IMG_ADDRESS : WE_IMG_ADDRESS_BUILD;
+      return devChk ? WE_IMG_ADDRESS : WE_IMG_ADDRESS_BUILD;
     }
-  } else if(name === 'customer') {
-    return ;
+  } else if (name === 'customer') {
+    if(!kindChk) {
+      return devChk ? MW_IMG_CUSTOMER : MW_IMG_CUSTOMER_BUILD;
+    } else if(kindChk) {
+      return devChk ? WE_IMG_CUSTOMER : WE_IMG_CUSTOMER_BUILD;
+    }
   } else if(name === 'products') {
-    return;
+    if(!kindChk) {
+      return devChk ? MW_IMG_PRODUCTS : MW_IMG_CUSTOMER_BUILD;
+    } else if(kindChk) {
+      return devChk ? WE_IMG_PRODUCTS : WE_IMG_CUSTOMER_BUILD;
+    }
   } else if(name === 'order') {
-    return ;
+    if(!kindChk) {
+      return devChk ? MW_IMG_ORDER : MW_IMG_CUSTOMER_BUILD;
+    } else if(kindChk) {
+      return devChk ? WE_IMG_ORDER : WE_IMG_CUSTOMER_BUILD;
+    }
   } else if(name === 'history') {
-    return ;
+    if(!kindChk) {
+      return devChk ? MW_IMG_HISTORY : MW_IMG_CUSTOMER_BUILD;
+    } else if(kindChk) {
+      return devChk ? WE_IMG_HISTORY : WE_IMG_CUSTOMER_BUILD;
+    }
   } else if(name === 'sale') {
-    return ;
+    if(!kindChk) {
+      return devChk ? MW_IMG_SALE : MW_IMG_CUSTOMER_BUILD;
+    } else if(kindChk) {
+      return devChk ? WE_IMG_SALE : WE_IMG_CUSTOMER_BUILD;
+    }
   }
 
   return 'none';
