@@ -128,5 +128,3 @@ pages.addEventListener('click', (e) => {
 
   popupImg.setAttribute(attrStr, srcStr);
 });
-
-
