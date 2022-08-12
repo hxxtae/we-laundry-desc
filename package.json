@@ -5,10 +5,11 @@
   "main": "index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "rm_dist": "rm -rf dist",
-    "dev": "parcel index.html",
-    "build": "npm run rm_dist && parcel build index.html --public-url ././",
-    "deploy": "gh-pages -d dist",
+    "rm_dev": "rm -rf dist/dev",
+    "rm_build": "rm -rf dist/build",
+    "dev": "npm run rm_dev && parcel index.html -d dist/dev",
+    "build": "npm run rm_build && parcel build index.html --public-url ././ -d dist/build",
+    "deploy": "gh-pages -d dist/build",
     "sass": "node-sass -wr --source-map true ./src/styles/main.scss ./style.css"
   },
   "keywords": [],
