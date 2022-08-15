@@ -56,17 +56,17 @@
                 </a>
               </li>
               <li class="bedge">
-                <a href="https://github.com/hxxtae/we-laundry-client/tree/deploy">
+                <a href="https://github.com/hxxtae/we-laundry-client/tree/deploy" target="_blank">
                   <img src="https://img.shields.io/github/repo-size/hxxtae/we-laundry-client?color=%23&logo=github" alt="git-repo-size">
                 </a>
               </li>
               <li class="bedge">
-                <a href="https://app.netlify.com/sites/welaundry/deploys">
+                <a href="https://app.netlify.com/sites/welaundry/deploys" target="_blank">
                   <img src="https://img.shields.io/netlify/b8c06778-2b90-4fd3-a346-5060aba03482?logo=netlify" alt="netlify">
                 </a>
               </li>
               <li class="bedge">
-                <a href="">
+                <a href="https://github.com/hxxtae/we-laundry-desc/blob/main/license" target="_blank">
                   <img src="https://img.shields.io/github/license/hxxtae/we-laundry-client?color=%23097aba&logo=github" alt="git-license">
                 </a>
               </li>
@@ -87,18 +87,18 @@
           <div class="border-bottom mb-3"></div>
           <div class="description-contents">
             <ul class="d-flex flex-column mb-0 pe-4">
-              <li class="">
+              <li>
                 <h4>What?</h4>
                 <p>대중적인 포스 시스템은 일반 음식점이나, 카페, 의류매장에서 많이 사용하지만, 세탁소 업종에서는
                   포스 시스템이 많지 않거나, 수기로 장부를 사용하기 때문에 이를 개선하고자 프로젝트를 기획하게 되었습니다.</p>
               </li>
-              <li class="">
+              <li>
                 <h4>How?</h4>
                 <p>우리동네 세탁소에서는 하루, 일주일에 수백가지 옷 개수와 종류가 세탁소에 맡겨집니다.
                   하나하나 장부 책자를 넘겨가면서 찾을 필요 없이 전자 장부처럼 활용 할 수 있으며, 더 나아가 날짜별, 고객별 등
                   데이터를 손쉽게 조회하고, 나의 매출, 손님 리스트, 품목 관리 등을 활용하여 매출 상승의 효과를 가져올 수 있습니다.</p>
               </li>
-              <li class="">
+              <li>
                 <h4>Who?</h4>
                 <p>큰 기업의 세탁소가 아닌 일반 세탁소(소상공인)를 대상으로 합니다.</p>
               </li>
@@ -223,14 +223,14 @@
                 <hr/>
                 <h5>Before</h5>
                 <p>&#11093; 회원가입 페이지 및 기능 미포함.</p>
-                <p>&#11093; 로그인 시 서버 인증 방식(세션 & 쿠키)을 통한 사용자 접속 식별 및 유지.</p>
+                <p>&#11093; 로그인 시 <strong>서버 인증 방식(세션 & 쿠키)</strong>을 통한 사용자 접속 식별 및 유지.</p>
                 <hr/>
                 <h5>After</h5>
                 <p>&#10004; 회원가입 페이지 및 기능 포함.
                   <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#signup-image">보기</button>
                 </p>
                 <p>&#10004; 회원가입 시 기존 사용자 중복확인 및 메세지 출력.</p>
-                <p>&#10004; 로그인 시 토큰(JWT) 생성을 통한 사용자 접속 식별 및 유지.</p>
+                <p>&#10004; 로그인 시 <strong>토큰(JWT)</strong> 생성을 통한 사용자 접속 식별 및 유지.</p>
               </div>
             </div>
             <h4 id="list-item-2" class="p-2 p-lg-3 mb-0">Main
@@ -249,11 +249,11 @@
                 <hr/>
                 <h5>Before</h5>
                 <p>&#11093; 최초 로그인 접속 시 에만 출력되는 페이지.</p>
-                <p>&#11093; 동적 SVG 베너 이외 다른 기능은 존재하지 않음.</p>
+                <p>&#11093; 동적 SVG 이미지 베너 이외 다른 기능은 존재하지 않음.</p>
                 <hr/>
                 <h5>After</h5>
                 <p>&#10004; 최초 로그인 및 토큰(브라우저 쿠키) 존재 시 최초 접속 후 출력되는 페이지.</p>
-                <p>&#10004; "포스 프로그램" 운영(영업) 시작 및 종료 기능 추가.</p>
+                <p>&#10004; "포스 애플리케이션" 운영(영업) 시작 및 종료 기능 추가.</p>
                 <p>&#10004; 영업 시작 시 시간 기록 및 
                   <a href="#list-item-6">Order(주문접수)</a> 
                   페이지 활성화.</p>
@@ -274,12 +274,12 @@
               <div class="mt-5">
                 <hr/>
                 <h5>Before</h5>
-                <p>&#11093; 정확한 우편번호를 찾을 수 있는 검색 기능이 없다.</p>
-                <p>&#11093; 주소ID는 고유번호를 오름차순으로 생성하여 부여하는 방식으로 관리됨. (Oracle의 Sequence 사용)</p>
+                <p>&#11093; 정확한 <strong>우편번호(주소)</strong>를 찾을 수 있는 검색 기능이 없다.</p>
+                <p>&#11093; <strong>주소ID</strong>는 고유번호를 오름차순으로 생성하여 부여하는 방식으로 관리됨. (Oracle의 Sequence 사용)</p>
                 <hr/>
                 <h5>After</h5>
-                <p>&#10004; 정확한 우편번호를 찾을 수 있는 <a href="https://postcode.map.daum.net/guide" target="_blank">우편번호 오픈소스</a> 를 사용.</p>
-                <p>&#10004; 주소ID는 중복이 없는 고유번호를 생성하는 방식으로 변경. (MongoDB의 ObjectId 사용)</p>
+                <p>&#10004; 정확한 <strong>우편번호(주소)</strong>를 찾을 수 있는 <a href="https://postcode.map.daum.net/guide" target="_blank">우편번호 오픈소스</a> 를 사용.</p>
+                <p>&#10004; <strong>주소ID</strong>는 중복이 없는 고유번호를 생성하는 방식으로 변경. (MongoDB의 ObjectId 사용)</p>
                 <p>&#10004; 많은 주소 데이터 관리를 위해 페이징 처리 됨.</p>
               </div>
             </div>
@@ -298,12 +298,17 @@
               <div class="mt-5">
                 <hr/>
                 <h5>Before</h5>
-                <p>&#11093; Before 페이지의 기능과 특징을 기술</p>
-                <p>&#11093; After 페이지와 비교하여 없는 기능과 특징을 기술</p>
+                <p>&#11093; <strong>고객 정보</strong> 생성 시 주소(단지이름, 동, 호) 는 Require, 전화번호는 Option</p>
+                <p>&#11093; <strong>고객 고유번호</strong>는 DB의 Sequence로 생성</p>
+                <p>&#11093; <strong>고객 조회</strong>는 고객번호, 전화번호, 주소(단지이름, 동, 호)로 조회</p>
                 <hr/>
                 <h5>After</h5>
-                <p>&#10004; After 페이지의 기능과 특징을 기술 </p>
-                <p>&#10004; Before 페이지와 비교하여 추가 및 향상된 기능과 특징을 기술</p>
+                <p>&#10004; <strong>고객 정보</strong> 생성 시 단지이름, 동, 호 만 Require</p>
+                <p>&#10004; <strong>고객 ID</strong>는 DB의 Unique ObjectId로 생성</p>
+                <p>
+                  &#10004; <strong>고객 조회</strong>는 주소(단지이름, 동, 호)로 조회
+                  <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#customer-search-image">보기</button>
+                </p>
               </div>
             </div>
             <h4 id="list-item-5" class="p-2 p-lg-3 mb-0">Products
@@ -406,7 +411,7 @@
 
   <!-- Image Popup -->
   <div class="modal fade" id="signup-image" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
+    <div class="modal-dialog" style="max-width: 700px">
       <div class="modal-content">
         <div class="modal-header">
           <h5 class="modal-title" id="exampleModalLabel">Signup (회원가입)</h5>
@@ -414,6 +419,20 @@
         </div>
         <div class="modal-body">
           <img src="./src/assets/img/we_signup.PNG" alt="signup-image" class="w-100"">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="customer-search-image" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" style="max-width: 700px">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Customer Search (고객 검색)</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <img src="./src/assets/img/we_customerSearch.PNG" alt="customer-search-image" class="w-100"">
         </div>
       </div>
     </div>
