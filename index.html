@@ -211,7 +211,7 @@
               <span>(로그인/회원가입)</span>              
             </h4>
             <div class="pages-contents p-2 p-lg-3 mb-4">
-              <div class="pages-wrapper d-flex flex-column flex-lg-row">
+              <div class="pages-wrapper d-flex flex-row flex-lg-row">
                 <div class="pages-image w-100 me-3 text-center" data-bs-toggle="modal" data-bs-target="#detail-image">
                   <img src="./src/assets/img/mw_address.PNG" alt="before-login-image">
                 </div>
@@ -326,12 +326,16 @@
               <div class="mt-5">
                 <hr/>
                 <h5>Before</h5>
-                <p>&#11093; Before 페이지의 기능과 특징을 기술(Test)</p>
-                <p>&#11093; After 페이지와 비교하여 없는 기능과 특징을 기술</p>
+                <p>&#11093; 카테고리별 품목 리스트의 추가, 수정, 삭제 가능.</p>
+                <p>&#11093; 직관적이지만 버튼이 많아 난잡한 UI로 가독성이 떨어진다.</p>
                 <hr/>
                 <h5>After</h5>
-                <p>&#10004; After 페이지의 기능과 특징을 기술 </p>
-                <p>&#10004; Before 페이지와 비교하여 추가 및 향상된 기능과 특징을 기술</p>
+                <p>&#10004; <strong>품목</strong> CRUD 뿐만 아니라 <strong>카테고리</strong> 추가, 변경, 삭제 가능.</p>
+                <p>&#10004; 품목 이란 많은 항목을 관리하기 때문에 최대한 간결하게 구성.</p>
+                <p>&#10004; 카테고리 내에서 원하는 <strong>품목 순서 배치</strong>가 가능.</p>
+                <p>&#10004; 폼목 관리를 위한 <strong>설정버튼</strong> 구성.
+                  <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#products-setting-image">보기</button>
+                </p>
               </div>
             </div>
             <h4 id="list-item-6" class="p-2 p-lg-3 mb-0">Order
@@ -349,12 +353,20 @@
               <div class="mt-5">
                 <hr/>
                 <h5>Before</h5>
-                <p>&#11093; Before 페이지의 기능과 특징을 기술</p>
-                <p>&#11093; After 페이지와 비교하여 없는 기능과 특징을 기술</p>
+                <p>&#11093; 단지이름, 동, 호 수로 검색 이후 고객을 선택하여 데이터 Set.</p>
+                <p>&#11093; 품목 찾기 버튼 클릭 시, 폼목 팜업에서 선택하여 주문 데이터 Set.</p>
+                <p>&#11093; 다이나믹한 주문내역 수정이 불가능.</p>
+                <p>&#11093; 주문내역 영수증 출력.
+                  <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#receipt-image">보기</button>
+                </p>
                 <hr/>
                 <h5>After</h5>
-                <p>&#10004; After 페이지의 기능과 특징을 기술 </p>
-                <p>&#10004; Before 페이지와 비교하여 추가 및 향상된 기능과 특징을 기술</p>
+                <p>&#10004; 단지이름, 동, 호 만 가지고 바로 고객 데이터 Set.</p>
+                <p>&#10004; 품목 박스 클릭 만으로 주문 데이터 Set.</p>
+                <p>&#10004; 사용자가 원하는 대로 주문내역 수정이 가능.</p>
+                <p>&#10004; 접수 진행 시 주문내역확인 및 결제진행, 할인율 적용 화면 추가.
+                  <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#order-confirm-image">보기</button>
+                </p>
               </div>
             </div>
             <h4 id="list-item-7" class="p-2 p-lg-3 mb-0">History
@@ -372,12 +384,13 @@
               <div class="mt-5">
                 <hr/>
                 <h5>Before</h5>
-                <p>&#11093; Before 페이지의 기능과 특징을 기술</p>
-                <p>&#11093; After 페이지와 비교하여 없는 기능과 특징을 기술</p>
+                <p>&#11093; 주문번호, 날짜, 주소, 전화번호 로 주문내역 검색.</p>
+                <p>&#11093; 주문내역 선택 시 팝업에서 주문상세내역 확인 가능.</p>
+                <p>&#11093; 주문내역 선택 시 영수증 출력 가능.</p>
                 <hr/>
                 <h5>After</h5>
-                <p>&#10004; After 페이지의 기능과 특징을 기술 </p>
-                <p>&#10004; Before 페이지와 비교하여 추가 및 향상된 기능과 특징을 기술</p>
+                <p>&#10004; 날짜, 주소로 주문내역 검색.</p>
+                <p>&#10004; 주문내역 선택 시 주문상세내역 확인 가능.</p>
               </div>
             </div>
             <h4 id="list-item-8" class="p-2 p-lg-3 mb-0">Sale
@@ -410,6 +423,7 @@
   </section>
 
   <!-- Image Popup -->
+  <!-- NOTE: sign image popup -->
   <div class="modal fade" id="signup-image" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" style="max-width: 700px">
       <div class="modal-content">
@@ -424,6 +438,7 @@
     </div>
   </div>
 
+  <!-- NOTE: customer search image popup -->
   <div class="modal fade" id="customer-search-image" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" style="max-width: 700px">
       <div class="modal-content">
@@ -438,6 +453,52 @@
     </div>
   </div>
 
+  <!-- NOTE: products setting image popup -->
+  <div class="modal fade" id="products-setting-image" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" style="max-width: 700px">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Products Setting (품목 설정)</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <img src="./src/assets/img/we_productsSetting.PNG" alt="products-setting-image" class="w-100"">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- NOTE: order confirm image popup -->
+  <div class="modal fade" id="order-confirm-image" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" style="max-width: 700px">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Order Confirm (주문 확인)</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <img src="./src/assets/img/we_orderConfirm.PNG" alt="order-confirm-image" class="w-100"">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- NOTE: receipt image popup -->
+  <div class="modal fade" id="receipt-image" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" >
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Receipt (영수증)</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body" style="text-align: center; height: 70vh;">
+          <img src="./src/assets/img/mw_receipt.PNG" alt="receipt-image" class="h-100"">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- NOTE: Image Detail Popup -->
   <div class="modal fade" id="detail-image" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" style="max-width: 800px">
       <div class="modal-content">
