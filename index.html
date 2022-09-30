@@ -408,12 +408,13 @@
               <div class="mt-5">
                 <hr/>
                 <h5>Before</h5>
-                <p>&#11093; Before 페이지의 기능과 특징을 기술</p>
-                <p>&#11093; After 페이지와 비교하여 없는 기능과 특징을 기술</p>
+                <p>&#11093; 왼쪽에는 금일 주문 매출, 오른쪽에는 작년, 올해 기준의 월별 매출 차트.</p>
+                <p>&#11093; 2년전 매출은 다시 볼 수 없다는 단점과 원하는 년도 매출 검색 미제공.</p>
                 <hr/>
                 <h5>After</h5>
-                <p>&#10004; After 페이지의 기능과 특징을 기술 </p>
-                <p>&#10004; Before 페이지와 비교하여 추가 및 향상된 기능과 특징을 기술</p>
+                <p>&#10004; (현재 진행 중인 페이지)</p>
+                <p>&#10004; 각 품목별 <strong>누적 개수</strong> 및 <strong>누적 금액</strong>을 리스트 및 차트로 제공.</p>
+                <p>&#10004; 진행 중: 연도별, 월별 검색 & 매출 리스트 및 차트 구현.</p>
               </div>
             </div>
           </div>
@@ -485,14 +486,14 @@
 
   <!-- NOTE: receipt image popup -->
   <div class="modal fade" id="receipt-image" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" >
+    <div class="modal-dialog" style="max-width: 300px">
       <div class="modal-content">
         <div class="modal-header">
           <h5 class="modal-title" id="exampleModalLabel">Receipt (영수증)</h5>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
-        <div class="modal-body" style="text-align: center; height: 70vh;">
-          <img src="./src/assets/img/mw_receipt.PNG" alt="receipt-image" class="h-100"">
+        <div class="modal-body">
+          <img src="./src/assets/img/mw_receipt.PNG" alt="receipt-image" class="w-100 d-block" style="object-fit:cover;">
         </div>
       </div>
     </div>
@@ -524,5 +525,13 @@
   <script type="module" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
   <script type="module" src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
   <script type="module" src="./src/js/bootstrapJs.js"></script>
+  <script defer>
+    console.log('Website by %c https://hxxtae.me ', `
+      font-size: 14px; 
+      line-height: 44px;
+      color: #e7e7e7;
+      background-color: #000000`
+    );
+  </script>
 </body>
 </html>
