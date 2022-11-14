@@ -2,13 +2,12 @@ import { imgAlt, imgNames } from './popupConfig.js';
 
 const pages = document.querySelector('.pages-scrollspy');
 const popup = document.querySelector(".show-detail");
-const attrStr = 'src'; /* only src */
 const state = 'dev'; /* choose dev & build */
 
 const { LOGIN, MAIN, ADDRESS, CUSTOMER, PRODUCTS, ORDER, HISTORY, SALE } = imgAlt;
 const { DEV, BUILD } = imgNames;
 
-const setSrcStr = (altStr, stateStr) => {
+const setSrcStr = (altStr, stateStr = 'dev') => {
   let srcStr = '';
 
   if (altStr === LOGIN.BEFORE) { // LOGIN (before)
@@ -80,13 +79,34 @@ const setSrcStr = (altStr, stateStr) => {
   return srcStr;
 }
 
+const getImgAltAndSetPopup = (imgElem) => {
+  const popupImg = popup.children[0];
+  const altStr = imgElem.getAttribute('alt');
+  const srcStr = setSrcStr(altStr, state);
+  popupImg.setAttribute('src', srcStr);
+}
+
+// NOTE: IMG click event of Detail Popup
 pages.addEventListener('click', (e) => {
   console.log('IMG Click !!');
 
-  const popupImg = popup.children[0];
+  const detailPopupString = '#detail-image';
   const target = e.target;
-  const altStr = target.getAttribute('alt');
-  const srcStr = setSrcStr(altStr, state);
 
-  popupImg.setAttribute(attrStr, srcStr);
+  // 1. click div of img
+  const targetStrFromDiv = target.dataset?.bsTarget;
+  if (!!targetStrFromDiv && targetStrFromDiv === detailPopupString) {
+    const imgElement = target.children[0];
+    getImgAltAndSetPopup(imgElement);
+    return;
+  }
+
+  // 2. click img in div
+  const targetStrFromImg = target.parentNode.dataset?.bsTarget;
+  if (!!targetStrFromImg && targetStrFromImg === detailPopupString) {
+    getImgAltAndSetPopup(target);
+    return;
+  }
 });
+
+
