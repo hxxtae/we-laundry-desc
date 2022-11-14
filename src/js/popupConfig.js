@@ -36,7 +36,7 @@ export const imgAlt = {
 // Dev
 const imgDevName = {
   LOGIN: {
-    BEFORE: 'mw_address.76d49ea8.PNG',
+    BEFORE: 'mw_login.96bb80b0.PNG',
     AFTER: 'we_login.55d31020.PNG',
   },
   MAIN: {
@@ -72,7 +72,7 @@ const imgDevName = {
 // Build
 const imgBuildName = {
   LOGIN: {
-    BEFORE: 'mw_main.aedf805e.PNG',
+    BEFORE: 'mw_login.45a71712.PNG',
     AFTER: 'we_login.7e2fd9d0.PNG',
   },
   MAIN: {
