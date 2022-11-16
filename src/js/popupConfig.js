@@ -80,11 +80,11 @@ const imgBuildName = {
     AFTER: 'we_main.e8f08d9d.PNG',
   },
   ADDRESS: {
-    BEFORE: 'mw_address.131beb94.PNG',
+    BEFORE: 'mw_address.beee946c.PNG',
     AFTER: 'we_address.eca32eb5.PNG',
   },
   CUSTOMER: {
-    BEFORE: 'mw_customer.d62d0a76.PNG',
+    BEFORE: 'mw_customer.6d8bcdd2.PNG',
     AFTER: 'we_customer.9a89caf1.PNG',
   },
   PRODUCTS: {
@@ -92,15 +92,15 @@ const imgBuildName = {
     AFTER: 'we_products.c684c2ea.PNG',
   },
   ORDER: {
-    BEFORE: 'mw_order.d5c5e74a.PNG',
+    BEFORE: 'mw_order.5187b033.PNG',
     AFTER: 'we_record.0e32baf9.PNG',
   },
   HISTORY: {
-    BEFORE: 'mw_history.3f67c26d.PNG',
+    BEFORE: 'mw_history.3385e4e9.PNG',
     AFTER: 'we_history.560572dc.PNG',
   },
   SALE: {
-    BEFORE: 'mw_sales.21efd559.PNG',
+    BEFORE: 'mw_sales.22177456.PNG',
     AFTER: 'we_sales.c6e9af81.PNG',
   }
 }
