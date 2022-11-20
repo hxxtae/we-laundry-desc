@@ -399,7 +399,10 @@
                 <hr/>
                 <h5>Before</h5>
                 <p>&#11093; 주문번호, 날짜, 주소, 전화번호 로 주문내역 검색.</p>
-                <p>&#11093; 주문내역 선택 시 팝업에서 주문상세내역 확인 가능.</p>
+                <p>&#11093; 저번주, 이번주 기준으로 요일단위 검색.
+                  <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#history-weeks-image">보기</button>
+                </p>
+                <p>&#11093; 주문내역 선택 시 팝업으로 주문상세내역 확인 가능.</p>
                 <p>&#11093; 주문내역 선택 시 영수증 출력 가능.</p>
                 <hr/>
                 <h5>After</h5>
@@ -509,6 +512,21 @@
         </div>
         <div class="modal-body">
           <img src="./src/assets/img/mw_receipt.PNG" alt="receipt-image" class="w-100 d-block" style="object-fit:cover;">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- NOTE: history_weeks image popup -->
+  <div class="modal fade" id="history-weeks-image" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" style="max-width: 800px">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Day Search (요일 검색)</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <img src="./src/assets/img/mw_history_weeks.PNG" alt="history-weeks-image" class="w-100 d-block" style="object-fit:cover;">
         </div>
       </div>
     </div>
