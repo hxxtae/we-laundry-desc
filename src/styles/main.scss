@@ -1,14 +1,33 @@
 @import '../../node_modules/bootstrap/scss/bootstrap';
 
-@import './constants/breakpoints';
+@import './constants/typography';
 @import './constants/colors';
+@import './constants/breakpoints';
 
 @import './base/reset';
 
 @import './mixins/response';
+@import './mixins/button';
 
-@import './layouts/banner';
+@import './modules/buttons';
+
 @import './layouts/header';
 @import './layouts/description';
-@import './layouts/stack';
-@import './layouts/pages';
+@import './layouts/products';
+@import './layouts/details';
+@import './layouts/footer';
+
+@import './components/entrance';
+@import './components/page1';
+@import './components/page2';
+@import './components/page3';
+@import './components/page4';
+@import './components/lines';
+@import './components/records';
+@import './components/history';
+@import './components/sales';
+@import './components/boldLines';
+@import './components/posMain';
+@import './components/exit';
+
+

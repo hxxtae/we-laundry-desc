@@ -1,19 +1,114 @@
 .description {
-  h3 {
-    font-weight: 600;
-    color: $text;
+  margin-top: 100vh;
+  background-color: $white;
+  border-bottom: 1px solid transparent; // 자식이 margin-bottom 효과를 줄 때, 벽을 만들어 적용 되게끔 만든다.
+
+  &-wrapper {
+    padding: 80px 0;
+    margin: 0 20px;
   }
 
-  &-contents {
-    h4 {
-      font-size: 20px;
-      color: $text;
+  &-header {
+
+    ul {
+      padding: 4px 0 20px;
     }
-    
+
+    li {
+      margin: 10px auto 20px;
+    }
+
+    h2 {
+      font-size: 26px;
+      font-weight: 600;
+      margin-bottom: 25px;
+    }
+
+    h3 {
+      font-weight: 600;
+      font-size: 16px;
+      padding-bottom: 5px;
+      margin-bottom: 5px;
+      border-bottom: 1px solid $light-gray;
+    }
+
     p {
       font-size: 14px;
-      line-height: 30px;
-      color: $text;
+      letter-spacing: .2px;
+      color: $text-dark2;
+    }
+  }
+
+  &-content {
+    font-size: 14px;
+    line-height: 31px;
+    color: $text-dark2;
+
+    br {
+      display: none;
+    }
+  }
+
+  &-links {
+    margin-top: 35px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    
+    a:first-child {
+      margin-bottom: 20px;
+    }
+  }
+
+  @include responsive('sm') {
+
+    &-wrapper {
+      padding: 17% 0;
+      margin: 0 6%;
+    }
+
+    &-header {
+      ul {
+        display: flex;
+        justify-content: stretch;
+        gap: 5%;
+        padding: 14px 0 30px;
+      }
+
+      li {
+        margin: 0;
+        flex-basis: 0;
+        flex-grow: 1;
+      }
+
+      h3 {
+        padding-bottom: 12px;
+        margin-bottom: 14px;
+        border-bottom: 3px solid $blur-dark;
+      }
+    }
+  }
+
+  @include responsive('md') {
+    &-wrapper {
+      max-width: 700px;
+      padding: 120px 0;
+      margin: 0 auto 100px;
+    }
+
+    &-header {
+      p {
+        font-size: 15px;
+      }
+    }
+
+    &-content {
+      font-size: 15px;
+
+      br {
+        display: block;
+      }
+
     }
   }
 }

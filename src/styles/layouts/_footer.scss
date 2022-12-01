@@ -1,0 +1,35 @@
+.footer {
+  background-color: $blur-dark;
+  width: 100%;
+
+  &-wrapper {
+    padding-top: 250px;
+  }
+
+  &-contact {
+    .contact-box {
+      text-align: right;
+      padding-bottom: 10px;
+      border-bottom: 1px solid $white;
+    }
+
+    p {
+      text-align: center;
+      font-size: 14px;
+      color: $gray;
+      padding: 15px;
+    }
+  }
+
+  @include responsive('md') {
+    &-contact {
+      .contact-box {
+        padding-bottom: 15px;
+      }
+    }
+
+    p {
+      padding: 22px;
+    }
+  }
+}

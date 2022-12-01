@@ -1,0 +1,8 @@
+.we-btn-dark {
+  @include ButtonBase(dark);
+}
+
+.we-btn-light {
+  @include ButtonBase(light);
+
+}

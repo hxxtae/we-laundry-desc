@@ -1,18 +1,36 @@
 @mixin responsive($screen) {
-  @if($screen == 'T') {
-    @media screen and(min-width: $breakpoint-lg) {
+  @if($screen == 'sm') {
+    @media screen and(min-width: map-get($break-point, sm)) {
       @content;
     }
   }
-  @if($screen == 'D') {
-    @media screen and (min-width: $breakpoint-md) {
+  @if($screen == 'md') {
+    @media screen and (min-width: map-get($break-point, md)) {
+      @content;
+    }
+  }
+
+  @if($screen == 'lg') {
+    @media screen and (min-width: map-get($break-point, lg)) {
+      @content;
+    }
+  }
+
+  @if($screen == 'xl') {
+    @media screen and (min-width: map-get($break-point, xl)) {
+      @content;
+    }
+  }
+
+  @if($screen == 'xxl') {
+    @media screen and (min-width: map-get($break-point, xxl)) {
       @content;
     }
   }
 }
 
 @mixin mobile-only() {
-  @media screen and (max-width: ($breakpoint-md - 1px)) {
+  @media screen and (max-width: (map-get($break-point, sm) - 1px)) {
     @content;
   }
 }

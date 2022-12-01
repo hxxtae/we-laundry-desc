@@ -1,0 +1,11 @@
+.products {
+  background-color: $blur-dark;
+  width: 100%;
+  overflow: hidden;
+
+  @include responsive('xxl') {
+    margin: 0 auto;
+    width: map-get($container-max-widths , xxl);
+  }
+}
+

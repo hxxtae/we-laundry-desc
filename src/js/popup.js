@@ -87,26 +87,26 @@ const getImgAltAndSetPopup = (imgElem) => {
 }
 
 // NOTE: IMG click event of Detail Popup
-pages.addEventListener('click', (e) => {
-  console.log('IMG Click !!');
+// pages.addEventListener('click', (e) => {
+//   console.log('IMG Click !!');
 
-  const detailPopupString = '#detail-image';
-  const target = e.target;
+//   const detailPopupString = '#detail-image';
+//   const target = e.target;
 
-  // 1. click div of img
-  const targetStrFromDiv = target.dataset?.bsTarget;
-  if (!!targetStrFromDiv && targetStrFromDiv === detailPopupString) {
-    const imgElement = target.children[0];
-    getImgAltAndSetPopup(imgElement);
-    return;
-  }
+//   // 1. click div of img
+//   const targetStrFromDiv = target.dataset?.bsTarget;
+//   if (!!targetStrFromDiv && targetStrFromDiv === detailPopupString) {
+//     const imgElement = target.children[0];
+//     getImgAltAndSetPopup(imgElement);
+//     return;
+//   }
 
-  // 2. click img in div
-  const targetStrFromImg = target.parentNode.dataset?.bsTarget;
-  if (!!targetStrFromImg && targetStrFromImg === detailPopupString) {
-    getImgAltAndSetPopup(target);
-    return;
-  }
-});
+//   // 2. click img in div
+//   const targetStrFromImg = target.parentNode.dataset?.bsTarget;
+//   if (!!targetStrFromImg && targetStrFromImg === detailPopupString) {
+//     getImgAltAndSetPopup(target);
+//     return;
+//   }
+// });
 
 
