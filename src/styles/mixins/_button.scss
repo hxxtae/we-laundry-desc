@@ -1,0 +1,36 @@
+@mixin ButtonBase($mode) {
+  display: inline-block;
+  border-radius: 4px;
+  padding: 10px 30px;
+  font-weight: 600;
+  letter-spacing: 1.1px;
+  transition: background-color .3s ease-in-out, color .3s ease-in-out;
+
+  @if ($mode == dark) {
+    border: 2px solid $blur-dark;
+    background-color: $blur-dark;
+    color: $white;
+  }
+
+  @if ($mode == light) {
+    border: 2px solid $white;
+    background-color: $white;
+    color: $blur-dark;
+  }
+
+  i {
+    margin-left: 40px;
+  }
+
+  &:hover {
+    @if ($mode == dark) {
+      background-color: $white;
+      color: $blur-dark;
+    }
+
+    @if ($mode == light) {
+      background-color: $blur-dark;
+      color: $white;
+    }
+  }
+}

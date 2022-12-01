@@ -1,0 +1,31 @@
+.lines {
+  width: 100%;
+  margin-top: 60px;
+
+  .line {
+    width: 100%;
+  }
+
+  .line-1 {
+    border-bottom: 40px solid $white;
+    margin-bottom: 15px;
+  }
+
+  .line-2 {
+    border-bottom: 25px solid $white;
+    margin-bottom: 25px;
+  }
+
+  .line-3 {
+    border-bottom: 15px solid $white;
+    margin-bottom: 40px;
+  }
+
+  .line-4 {
+    border-bottom: 2px solid $white;
+  }
+
+  @include responsive('md') {
+    margin-top: 120px;
+  }
+}

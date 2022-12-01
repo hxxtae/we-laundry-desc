@@ -1,0 +1,102 @@
+.page4 {
+
+  &-wrapper {
+    padding: 160px 0;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: stretch;
+  }
+
+  &-group {
+
+    .buttons {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+
+      button {
+        width: 100%;
+
+        // NOTE: 상태 초기화 (JS로 버튼 클릭 시 변경)
+        &:first-child {
+          background-color: $blur-dark;
+          color: $white;
+        }
+      }
+    }
+  }
+
+  &-image-group {
+    position: relative;
+    max-width: 700px;
+    margin-bottom: 10px;
+    // ✨ NOTE: ul 태그 자식 요소 전부 absolute 이기 때문에 태그 크기가 없다. -> 비율로 크기 강제로 줌
+    aspect-ratio: 16 / 10;
+  }
+
+  &-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    aspect-ratio: 16 / 10;
+
+    // NOTE: 상태 초기화 (JS로 버튼 클릭 시 변경)
+    &:first-child {
+      opacity: 1;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .clone {
+    font-size: 14px;
+    color: $light-blur;
+    line-height: 35px;
+    align-self: flex-end;
+    text-align: right;
+    margin-bottom: 20px;
+  }
+
+  @include responsive('md') {
+    &-wrapper {
+      flex-direction: row;
+      justify-content: center;
+      align-items: stretch;
+    }
+
+    &-group {
+      margin-right: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      p {
+        font-size: 14px;
+        color: $light-blur;
+        line-height: 35px;
+        text-align: right;
+        margin-bottom: 20px;
+      }
+    }
+
+    &-image-group {
+      margin-bottom: 0;
+      // ✨ NOTE: ul 태그 자식 요소 전부 absolute 이기 때문에 태그 크기가 없다. -> 너비로 크기 강제로 줌
+      width: 700px;
+    }
+  }
+
+  @include responsive('lg') {
+    &-group {
+      p {
+        font-size: 16px;
+      }
+    }
+  }
+}
+
