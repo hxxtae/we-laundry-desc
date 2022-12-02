@@ -18,21 +18,27 @@
       button {
         width: 100%;
 
-        // NOTE: 상태 초기화 (JS로 버튼 클릭 시 변경)
-        &:first-child {
-          background-color: $blur-dark;
-          color: $white;
+        &:active {
+          transform: scale(.9);
         }
+      }
+
+      .active {
+        background-color: $blur-dark;
+        color: $white;
       }
     }
   }
 
   &-image-group {
     position: relative;
-    max-width: 700px;
     margin-bottom: 10px;
-    // ✨ NOTE: ul 태그 자식 요소 전부 absolute 이기 때문에 태그 크기가 없다. -> 비율로 크기 강제로 줌
+    
+    width: 100%;
+    max-width: 700px;
+    // ✨ NOTE: ul 태그 자식 요소 전부 absolute 이기 때문에 태그 크기가 없다. -> 비율로 크기 강제로 줌 / padding은 이전 방법
     aspect-ratio: 16 / 10;
+    // padding-top: 65%;
   }
 
   &-image {
@@ -40,7 +46,7 @@
     top: 0;
     left: 0;
     opacity: 0;
-    aspect-ratio: 16 / 10;
+    transition: opacity 200ms ease-in-out;
 
     // NOTE: 상태 초기화 (JS로 버튼 클릭 시 변경)
     &:first-child {
@@ -86,8 +92,6 @@
 
     &-image-group {
       margin-bottom: 0;
-      // ✨ NOTE: ul 태그 자식 요소 전부 absolute 이기 때문에 태그 크기가 없다. -> 너비로 크기 강제로 줌
-      width: 700px;
     }
   }
 
