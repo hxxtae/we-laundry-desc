@@ -3,9 +3,13 @@
   -moz-osx-font-smoothing: grayscale;
   box-sizing: border-box;
 }
+
+html {
+  cursor: url('./src/assets/svg/custom_cursor_default.svg'), auto;
+}
+
 body {
   font-family: $font-ko;
-  position: relative;
   background-color: $white;
   overflow-x: hidden;
   
@@ -35,8 +39,21 @@ li, ol, ul {
 a {
   color: initial;
   text-decoration: none;
+  cursor: url('./src/assets/svg/custom_cursor_pointer.svg'), auto;
 
   &:hover {
-    color: $white;
+    color: $white; // NOTE: bootstrap css style reset!
+    cursor: url('./src/assets/svg/custom_cursor_pointer.svg'), auto;
+  }
+}
+
+button:not(:disabled), 
+[type="button"]:not(:disabled), 
+[type="reset"]:not(:disabled), 
+[type="submit"]:not(:disabled) {
+  cursor: url('./src/assets/svg/custom_cursor_pointer.svg'), atuo;
+
+  &:hover {
+    cursor: url('./src/assets/svg/custom_cursor_pointer.svg'), auto;
   }
 }
