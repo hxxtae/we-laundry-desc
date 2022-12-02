@@ -1,0 +1,30 @@
+.side-menu {
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  border-radius: 50%;
+  // NOTE: 바로 상위 부모와 비교하기 때문에, 비교할 부모 인접 자식요소 안에 선언해야 한다.
+  mix-blend-mode: difference;
+  background-color: $blur-dark;
+  z-index: 10;
+
+  &-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+
+    i {
+      font-size: 22px;
+      color: $white;
+    }
+
+    span {
+      font-size: 14px;
+      color: $white;
+      transform: translateY(-4px);
+    }
+  }
+}
