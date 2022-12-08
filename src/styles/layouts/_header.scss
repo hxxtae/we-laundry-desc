@@ -10,7 +10,7 @@
   background-color: $blur-dark;
   z-index: -1;
 
-  &-wrapper {
+  &-image {
     margin: 0 auto;
     max-width: 462px;
     height: 100%;
@@ -32,13 +32,13 @@
   }
 
   @include responsive('md') {
-    &-wrapper {
+    &-image {
       margin-left: 0;
     }
   }
 
   @include responsive('lg') {
-    &-wrapper {
+    &-image {
       margin-left: 100px;
     }
 
