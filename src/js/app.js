@@ -1,12 +1,17 @@
-const sectionPage4 = document.querySelector('.page4');
+/*
+---------------------
+  module-1
+---------------------
+ */
+const SECTION_PAGE_4 = document.querySelector('.page4');
 
 // btn
-const btnGroup = sectionPage4.querySelector('.buttons');
+const btnGroup = SECTION_PAGE_4.querySelector('.buttons');
 const [customerBtn, productsBtn, addressBtn] = btnGroup.children;
 const [customerBtnName, productsBtnName, addressBtnName] = ['cus', 'pro', 'add'];
 
 // img
-const imageGroup = sectionPage4.querySelector('.page4-image-group');
+const imageGroup = SECTION_PAGE_4.querySelector('.page4-image-group');
 const [customerImg, productsImg, addressImg] = imageGroup.children;
 
 const onAddElementStyle = (btnElem, imgElem) => {
@@ -40,7 +45,7 @@ const onTargetClickEvent = (targetName) => {
   }
 }
 
-btnGroup.addEventListener('click', (e) => {
+const onProductBtnEvent = (e) => {
   const target = e.target;
   if (target.nodeName !== 'BUTTON') return;
 
@@ -48,4 +53,33 @@ btnGroup.addEventListener('click', (e) => {
   if (!btnName) return;
 
   onTargetClickEvent(btnName);
-});
+}
+
+/*
+---------------------
+  module-2
+---------------------
+ */
+const HEADER = document.querySelector('.header');
+const HEADER_IMG = HEADER.querySelector('.header-image');
+const HEADER_CHEVRON = HEADER.querySelector('.header-go-next');
+const headerHeight = HEADER.clientHeight;
+
+const onHeaderOpacityEvent = (e) => {
+  const scrollY = window.scrollY;
+  if (headerHeight === 0) return;
+  if (scrollY > headerHeight) return;
+  
+  const headerY = headerHeight - scrollY;
+  const opacityValue = Math.floor((headerY / headerHeight) * 10) / 10;
+  HEADER_IMG.style.opacity = opacityValue;
+  HEADER_CHEVRON.style.opacity = opacityValue;
+}
+
+/*
+---------------------
+  Function Run
+---------------------
+ */
+btnGroup.addEventListener('click', onProductBtnEvent);
+window.addEventListener('scroll', onHeaderOpacityEvent);
