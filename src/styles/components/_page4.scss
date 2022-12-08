@@ -37,7 +37,7 @@
     width: 100%;
     max-width: 700px;
     // ✨ NOTE: ul 태그 자식 요소 전부 absolute 이기 때문에 태그 크기가 없다. -> 비율로 크기 강제로 줌 / padding은 이전 방법
-    aspect-ratio: 16 / 10;
+    aspect-ratio: 4 / 3;
     // padding-top: 65%;
   }
 
@@ -47,6 +47,9 @@
     left: 0;
     opacity: 0;
     transition: opacity 200ms ease-in-out;
+    border: 2px solid $white;
+    border-radius: 10px;
+    overflow: hidden;
 
     // NOTE: 상태 초기화 (JS로 버튼 클릭 시 변경)
     &:first-child {
