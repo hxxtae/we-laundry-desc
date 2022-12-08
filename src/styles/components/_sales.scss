@@ -15,6 +15,9 @@
 
   &-image {
     max-width: 700px;
+    border: 2px solid $white;
+    border-radius: 10px;
+    overflow: hidden;
 
     img {
       width: 100%;
