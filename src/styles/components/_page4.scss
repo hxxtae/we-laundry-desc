@@ -50,6 +50,7 @@
     border: 2px solid $white;
     border-radius: 10px;
     overflow: hidden;
+    box-shadow: 9px 13px 25px #000;
 
     // NOTE: 상태 초기화 (JS로 버튼 클릭 시 변경)
     &:first-child {
